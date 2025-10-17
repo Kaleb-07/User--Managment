@@ -45,5 +45,14 @@
   #listBtn { background-color: #007bff; color: #fff; }   /* blue */
   #editBtn { background-color: #ffc107; color: #000; }   /* yellow */
   #deleteBtn { background-color: #dc3545; color: #fff; } /* red */
-  
+
  button:hover { opacity: 0.8; }
+
+   /* Buttons arranged in column */
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
