@@ -61,5 +61,9 @@ app.get("/create-table", (req, res)=>{
   let insertName = "INSERT INTO customer (name) VALUES(?)";
   let insertAddress = "INSERT INTO address (customer_id, address) VALUES(? , ?)";
   let insertCompany = "INSERT INTO company (customer_id, company) VALUES(? , ?)";
+      mysqlConnection.query(insertName, [name], (err, result, fields)=>{
+    if (err) console.log(err)
+    let id =result.insertId
   
+  });
   });
