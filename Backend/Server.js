@@ -34,5 +34,5 @@ app.get("/create-table", (req, res)=>{
       name VARCHAR(100) NOT NULL
     );
   `;
-  
+
   }); 
