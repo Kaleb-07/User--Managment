@@ -42,4 +42,17 @@ app.get("/create-table", (req, res)=>{
       FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
     );
   `;
+    mysqlConnection.query(name, (err) => {
+    if (err) throw err;
+    console.log(" name table ready");
+  mysqlConnection.query(address, (err) => {
+    if (err) throw err;
+    console.log(" address table ready");
+  mysqlConnection.query(company, (err) => {
+    if (err) throw err;
+    console.log(" company table ready");
+    res.send("✅ All tables created successfully!");
+    });
+    });
+    });
   }); 
