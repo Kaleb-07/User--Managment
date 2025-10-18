@@ -15,3 +15,11 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../DataBase/Frontend/js/index.html"));
 });
+var mysqlConnection = mysql.createConnection({
+  user: "root",
+  password: "",
+  host: "localhost",
+  database: "evani",
+  port: 3308,
+  multipleStatements: true
+});
