@@ -45,3 +45,22 @@ const id = document.getElementById("editId").value;
     // Optionally refresh the list
   fetchList();
 });
+
+  // Delete
+  document.getElementById("deleteForm").addEventListener("submit", async (e) => {
+  e.preventDefault(); // prevent default form submission
+
+  const id = document.getElementById("deleteId").value;
+
+  // Send POST request to delete user
+  const res = await fetch("http://localhost:3000/deleteuser", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id }) // send ID as JSON
+  });
+    const data = await res.text();
+  alert(data);
+
+  // Optionally refresh the list after deletion
+  fetchList(); // assumes you have fetchList() to update your table
+});
