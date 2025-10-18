@@ -34,5 +34,12 @@ app.get("/create-table", (req, res)=>{
       name VARCHAR(100) NOT NULL
     );
   `;
-
+      const company = `
+    CREATE TABLE IF NOT EXISTS company (
+      company_id INT AUTO_INCREMENT PRIMARY KEY,
+      customer_id INT,
+      company VARCHAR(100),
+      FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+    );
+  `;
   }); 
