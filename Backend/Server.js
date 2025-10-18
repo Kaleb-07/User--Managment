@@ -23,3 +23,7 @@ var mysqlConnection = mysql.createConnection({
   port: 3308,
   multipleStatements: true
 });
+mysqlConnection.connect((err) =>{
+  if(err) console.log(err);
+  else console.log("Database Connected")
+});
