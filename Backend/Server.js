@@ -56,3 +56,10 @@ app.get("/create-table", (req, res)=>{
     });
     });
   }); 
+  app.post("/adduser",(req, res) =>{
+  const {name, address, company} = req.body;
+  let insertName = "INSERT INTO customer (name) VALUES(?)";
+  let insertAddress = "INSERT INTO address (customer_id, address) VALUES(? , ?)";
+  let insertCompany = "INSERT INTO company (customer_id, company) VALUES(? , ?)";
+  
+  });
