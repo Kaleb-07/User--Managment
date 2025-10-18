@@ -23,3 +23,25 @@
       html += "</table>";
       document.getElementById("listResult").innerHTML = html;
     }
+        // edit 
+    document.getElementById("editForm").addEventListener("submit", async (e) => {
+  e.preventDefault(); // prevent page refresh
+
+const id = document.getElementById("editId").value;
+  const payload = {
+    name: document.getElementById("editName").value,
+    address: document.getElementById("editAddress").value,
+    company: document.getElementById("editCompany").value,
+  };
+
+  const res = await fetch(`http://localhost:3000/edit/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await res.text(); // can be success message
+  alert(data);
+    // Optionally refresh the list
+  fetchList();
+});
