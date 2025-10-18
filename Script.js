@@ -19,3 +19,7 @@
           <td>${row.company}</td>
         </tr>`;
       });
+
+      html += "</table>";
+      document.getElementById("listResult").innerHTML = html;
+    }
