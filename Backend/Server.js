@@ -27,3 +27,12 @@ mysqlConnection.connect((err) =>{
   if(err) console.log(err);
   else console.log("Database Connected")
 });
+app.get("/create-table", (req, res)=>{
+  const name = `
+    CREATE TABLE IF NOT EXISTS customer (
+      customer_id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(100) NOT NULL
+    );
+  `;
+  
+  }); 
