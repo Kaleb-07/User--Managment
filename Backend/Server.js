@@ -72,5 +72,6 @@ app.get("/create-table", (req, res)=>{
       mysqlConnection.query(insertCompany, [id, company],(err, result)=>{
       if(err) console.log(err)
     });
+    res.send("DataS inserted successfully")
   });
   });
