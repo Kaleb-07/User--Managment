@@ -96,3 +96,11 @@ app.post("/adduser",(req, res) =>{
   });
   res.send("DataS inserted successfully")
 });
+// route /adduser => to insert customer data to the tables
+app.get("/adduser", (req, res)=> {
+  mysqlConnection.query(
+    "SELECT *FROM customer JOIN address JOIN company ON customer.customer_id = address.customer_id AND customer.customer_id = company.customer_id", (err,results,fields)=>{
+      if(err) console.log(err)
+        res.json(results)
+    });
+});
