@@ -139,3 +139,15 @@ app.put("/edit/:id", (req, res) => {
     res.send("Customer updated successfully!");
   });
 });
+// delete 
+app.post("/deleteuser", (req, res) => {
+  const id = req.body.id;
+
+  if (!id) return res.status(400).send("ID is required");
+
+  // SQL to delete related records first
+  const sql = `
+    DELETE FROM company WHERE customer_id = ?;
+    DELETE FROM address WHERE customer_id = ?;
+    DELETE FROM customer WHERE customer_id = ?;
+  `;
