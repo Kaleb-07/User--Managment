@@ -75,3 +75,24 @@ app.get("/create-table", (req, res)=>{
     res.send("DataS inserted successfully")
   });
   });
+  //  crud
+
+app.post("/adduser",(req, res) =>{
+  const {name, address, company} = req.body;
+  let insertName = "INSERT INTO customer (name) VALUES(?)";
+  let insertAddress = "INSERT INTO address (customer_id, address) VALUES(? , ?)";
+  let insertCompany = "INSERT INTO company (customer_id, company) VALUES(? , ?)";
+      mysqlConnection.query(insertName, [name], (err, result, fields)=>{
+    if (err) console.log(err)
+    // else console.log(result)
+    let id =result.insertId
+
+    mysqlConnection.query(insertAddress, [id, address],(err, result)=>{
+      if(err) console.log(err)
+    })
+    mysqlConnection.query(insertCompany, [id, company],(err, result)=>{
+      if(err) console.log(err)
+    });
+  });
+  res.send("DataS inserted successfully")
+});
