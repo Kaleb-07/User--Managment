@@ -104,3 +104,23 @@ app.get("/adduser", (req, res)=> {
         res.json(results)
     });
 });
+// GET /list => retrieve all customers with their address and company
+app.get("/list", (req, res) => {
+  const sql = `
+    SELECT 
+      customer.customer_id,
+      customer.name,
+      address.address,
+      company.company
+    FROM customer
+    JOIN address ON customer.customer_id = address.customer_id
+    JOIN company ON customer.customer_id = company.customer_id
+  `;
+    mysqlConnection.query(sql, (err, results, fields) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Database query error");
+    }
+    res.json(results); // return the data as JSON
+  });
+});
