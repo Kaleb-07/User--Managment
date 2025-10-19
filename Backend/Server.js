@@ -134,3 +134,8 @@ app.put("/edit/:id", (req, res) => {
     UPDATE address SET address = ? WHERE customer_id = ?;
     UPDATE company SET company = ? WHERE customer_id = ?;
   `;
+  mysqlConnection.query(sql, [name, id, address, id, company, id], (err, result) => {
+    if (err) return res.status(500).send("Error updating customer");
+    res.send("Customer updated successfully!");
+  });
+});
