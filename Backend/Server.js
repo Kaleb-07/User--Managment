@@ -124,3 +124,13 @@ app.get("/list", (req, res) => {
     res.json(results); // return the data as JSON
   });
 });
+// edit the databases
+app.put("/edit/:id", (req, res) => {
+  const id = req.params.id;
+  const { name, address, company } = req.body;
+
+  const sql = `
+    UPDATE customer SET name = ? WHERE customer_id = ?;
+    UPDATE address SET address = ? WHERE customer_id = ?;
+    UPDATE company SET company = ? WHERE customer_id = ?;
+  `;
