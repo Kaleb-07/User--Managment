@@ -151,3 +151,13 @@ app.post("/deleteuser", (req, res) => {
     DELETE FROM address WHERE customer_id = ?;
     DELETE FROM customer WHERE customer_id = ?;
   `;
+    mysqlConnection.query(sql, [id, id, id], (err, result) => {
+    if (err) {
+      console.log("MySQL Error:", err);
+      return res.status(500).send("Error deleting customer");
+    }
+    res.send("Customer deleted successfully!");
+  });
+});
+app.listen(3000, ()=> console.log ("listening to : 3000"))
+
