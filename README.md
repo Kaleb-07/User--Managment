@@ -69,3 +69,14 @@ Data includes:
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+┌────────────────────────────┐
+│     USER MANAGEMENT        │
+├────────────────────────────┤
+│ [Create] [List] [Edit] [Delete] │
+│                                │
+│  → Form fields appear by action │
+│  → Data fetched and shown in table │
+└────────────────────────────┘
+customer(customer_id, name)
+address(address_id, customer_id, address)
+company(company_id, customer_id, company)
