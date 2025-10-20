@@ -53,3 +53,14 @@ Data includes:
 🔴 Deletes a record using the `/deleteuser` route (HTTP POST with ID).
 
 ---
+## 🔌 Backend Logic (app.js)
+
+🧠 The backend:
+- Connects to MySQL at port `3308`
+- Defines tables: `customer`, `address`, `company`
+- Handles routes for:
+  - `/create-table` → Create DB tables  
+  - `/adduser` → Insert a new user  
+  - `/list` → Show all users  
+  - `/edit/:id` → Update an existing user  
+  - `/deleteuser` → Delete a user  
