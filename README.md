@@ -34,3 +34,12 @@ It’s a simple yet **real-world example** of how the frontend and backend inter
 | `app.js` | Node.js backend: connects to MySQL and defines API routes |
 
 ---
+
+## 🚀 Features Breakdown
+
+### 1️⃣ Create User
+🟢 Adds a new record to MySQL using the `/adduser` route.  
+Data includes:
+- `name`
+- `address`
+- `company`
