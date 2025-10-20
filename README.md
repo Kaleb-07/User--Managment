@@ -11,3 +11,10 @@ This project is built to **demonstrate a full-stack CRUD (Create, Read, Update, 
 It’s a simple yet **real-world example** of how the frontend and backend interact through **API endpoints**, forming the core of many web applications.
 
 ---
+## ⚙️ How It Works (Overview)
+
+### 🖥️ Frontend
+- Built with **HTML, CSS, and JavaScript**.  
+- The UI has 4 main sections — Create, List, Edit, and Delete.  
+- Each section is shown dynamically using `displayForm()` in `Script.js`.  
+- `fetch()` is used to communicate with the backend REST API.
