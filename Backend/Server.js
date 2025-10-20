@@ -73,7 +73,7 @@ app.get("/create-table", (req, res)=>{
       if(err) console.log(err)
     });
     res.send("DataS inserted successfully")
-  });
+  }); 
   });
   //  crud
 
