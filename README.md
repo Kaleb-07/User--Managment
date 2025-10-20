@@ -64,3 +64,8 @@ Data includes:
   - `/list` → Show all users  
   - `/edit/:id` → Update an existing user  
   - `/deleteuser` → Delete a user  
+📦 Uses middlewares:
+```js
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
