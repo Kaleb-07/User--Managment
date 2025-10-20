@@ -18,3 +18,9 @@ It’s a simple yet **real-world example** of how the frontend and backend inter
 - The UI has 4 main sections — Create, List, Edit, and Delete.  
 - Each section is shown dynamically using `displayForm()` in `Script.js`.  
 - `fetch()` is used to communicate with the backend REST API.
+### 💾 Backend
+- Built using **Node.js** and **Express.js**.
+- **MySQL** is used as the database for persistent storage.
+- Uses `cors`, `express.json()`, and `express.urlencoded()` to handle frontend requests.
+
+---
