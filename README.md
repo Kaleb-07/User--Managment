@@ -43,3 +43,13 @@ Data includes:
 - `name`
 - `address`
 - `company`
+### 2️⃣ List Users
+🔵 Fetches and displays all records in a table using the `/list` route.
+
+### 3️⃣ Edit User
+🟡 Updates existing data using the `/edit/:id` route (HTTP PUT request).
+
+### 4️⃣ Delete User
+🔴 Deletes a record using the `/deleteuser` route (HTTP POST with ID).
+
+---
