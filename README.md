@@ -24,3 +24,13 @@ It’s a simple yet **real-world example** of how the frontend and backend inter
 - Uses `cors`, `express.json()`, and `express.urlencoded()` to handle frontend requests.
 
 ---
+## 🧱 Project Files
+
+| File | Description |
+|------|--------------|
+| `index.html` | Main webpage with buttons and forms for each CRUD operation |
+| `Style.css` | Contains UI design (colors, layout, flexbox, and shadows) |
+| `Script.js` | Handles form actions, fetch requests, and dynamic section display |
+| `app.js` | Node.js backend: connects to MySQL and defines API routes |
+
+---
