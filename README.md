@@ -6,7 +6,7 @@ This project is built to **demonstrate a full-stack CRUD (Create, Read, Update, 
     - ✍️ Create new user data (name, address, company)
     - 👁️ View all user records
     - ✏️ Edit existing users
-    - 🗑️ Delete users by ID
+    - 🗑️ Delete users by ID.
 
 It’s a simple yet **real-world example** of how the frontend and backend interact through **API endpoints**, forming the core of many web applications.
 
@@ -23,30 +23,30 @@ It’s a simple yet **real-world example** of how the frontend and backend inter
     - Uses `cors`, `express.json()`, and `express.urlencoded()` to handle frontend requests.
 
 🧱 Project Files
-  File-Description
-`index.html` :- Main webpage with buttons and forms for each CRUD operation
-`Style.css` :- Contains UI design (colors, layout, flexbox, and shadows)
-`Script.js` :- Handles form actions, fetch requests, and dynamic section display
-`app.js` :- Node.js backend: connects to MySQL and defines API routes
+  File-Description.
+`index.html` :- Main webpage with buttons and forms for each CRUD operation.
+`Style.css` :- Contains UI design (colors, layout, flexbox, and shadows).
+`Script.js` :- Handles form actions, fetch requests, and dynamic section display.
+`app.js` :- Node.js backend: connects to MySQL and defines API routes.
 
 🚀 Features Breakdown
 
-1️⃣ Create User
+1️⃣ Create User.
 🟢 Adds a new record to MySQL using the `/adduser` route.  
 Data includes:
-    - `name`
-    - `address`
-    - `company`
-2️⃣ List Users
+    - `name`.
+    - `address`.
+    - `company`.
+2️⃣ List Users.
 🔵 Fetches and displays all records in a table using the `/list` route.
 
-3️⃣ Edit User
+3️⃣ Edit User.
 🟡 Updates existing data using the `/edit/:id` route (HTTP PUT request).
 
-4️⃣ Delete User
+4️⃣ Delete User.
 🔴 Deletes a record using the `/deleteuser` route (HTTP POST with ID).
 
-Backend Logic (app.js)
+Backend Logic (app.js).
 
 🧠 The backend:
 - Connects to MySQL at port `3308`
