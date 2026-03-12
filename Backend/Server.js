@@ -10,7 +10,7 @@ app.use(
   express.urlencoded({
      extended: true ,
     }));
-// middle ware to extract info from the frontend that are sent through json
+// middle ware to extract info from the frontend that are sent through(using) json
 app.use(express.json());
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../DataBase/Frontend/js/index.html"));
