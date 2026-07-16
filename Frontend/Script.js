@@ -23,7 +23,7 @@
       html += "</table>";
       document.getElementById("listResult").innerHTML = html;
     }
-        // edit 
+        // edit operations 
     document.getElementById("editForm").addEventListener("submit", async (e) => {
   e.preventDefault(); // prevent page refresh
 
