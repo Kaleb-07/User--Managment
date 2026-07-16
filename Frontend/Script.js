@@ -1,4 +1,4 @@
-   // Hide all sections except the selected one
+   // Hide all sections except the selected ones
     function displayForm(showId) {
       const sections = ['newSection', 'listSection', 'editSection', 'deleteSection'];
       sections.forEach(id => {
