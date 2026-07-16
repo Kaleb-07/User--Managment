@@ -46,7 +46,7 @@ const id = document.getElementById("editId").value;
   fetchList();
 });
 
-  // Delete
+  // Delete operations 
   document.getElementById("deleteForm").addEventListener("submit", async (e) => {
   e.preventDefault(); // prevent default form submission
 
