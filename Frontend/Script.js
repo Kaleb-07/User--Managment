@@ -52,7 +52,7 @@ const id = document.getElementById("editId").value;
 
   const id = document.getElementById("deleteId").value;
 
-  // Send POST request to delete user
+  // Send POST request to delete users
   const res = await fetch("http://localhost:3000/deleteuser", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
