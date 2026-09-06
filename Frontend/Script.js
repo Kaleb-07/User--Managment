@@ -5,7 +5,7 @@
         document.getElementById(id).style.display = (id === showId) ? 'flex' : 'none';
       });
     }
-        // Example: Fetch list from backend (GET /list)
+        // Example: Fetch list from backends (GET /list)
     async function fetchList() {
       const res = await fetch("http://localhost:3000/list");
       const data = await res.json();
