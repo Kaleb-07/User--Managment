@@ -61,6 +61,6 @@ const id = document.getElementById("editId").value;
     const data = await res.text();
   alert(data);
 
-  // Optionally refresh the list after deletion
+  // Optionally refresh the list after deleted
   fetchList(); // assumes you have fetchList() to update your table
 });
