@@ -42,7 +42,7 @@ const id = document.getElementById("editId").value;
 
   const data = await res.text(); // can be success message
   alert(data);
-    // Optionally refresh the list
+    // the Optionally refresh the list
   fetchList();
 });
 
