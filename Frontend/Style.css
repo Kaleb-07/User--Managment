@@ -40,7 +40,7 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  /* Button colors for actions */
+  /* the Button colors for actions */
   #newBtn { background-color: #28a745; color: #fff; }    /* green */
   #listBtn { background-color: #007bff; color: #fff; }   /* blue */
   #editBtn { background-color: #ffc107; color: #000; }   /* yellow */
